@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BMI.MainPage"
+             Title="Kalkulator BMI">
+
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <!--
+            <Entry
+                x:Name="WagaEntry" 
+                Placeholder="Waga (kg)" 
+                Keyboard="Numeric"/>
+            <Entry
+                x:Name="WzrostEntry" 
+                Placeholder="Wzrost (cm)" 
+                Keyboard="Numeric"/>-->
+            <Label Text="Masa Ciała (kg):" />
+            <Slider x:Name="WagaSlider" 
+                    Minimum="40" 
+                    Maximum="180" 
+                    Value="70" 
+                    ValueChanged="ZmianaWartosciWagi" />
+            <Label x:Name="WagaLabel" Text="70 kg" />
+
+
+            <Label Text="Wzrost (cm):" />
+            <Slider x:Name="WzrostSlider" 
+                    Minimum="100" 
+                    Maximum="230" 
+                    Value="170" 
+                    ValueChanged="ZmianaWartosciWzrostu" />
+            <Label x:Name="WzrostLabel" Text="170 cm" />
+
+            <Button
+                Text="Kliknij aby obliczyć BMI" 
+                Clicked="ObliczBmi"/>
+
+            <Label 
+                x:Name="WynikLabel" 
+                Text="Twój wynik BMI pojawi się tutaj."
+                FontSize="18" />
+
+
+        </VerticalStackLayout>
+        
+    </ScrollView>
+
+</ContentPage>
