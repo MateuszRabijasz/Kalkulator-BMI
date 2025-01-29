@@ -61,7 +61,6 @@
             }
             catch
             {
-                // Obsługa błędów, np. niepoprawnych danych
                 WynikLabel.Text = "Proszę wprowadzić poprawne dane.";
                 BackgroundColor = Colors.White;
             }
